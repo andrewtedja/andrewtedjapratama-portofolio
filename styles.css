@@ -1,0 +1,101 @@
+/************ General CSS ***************/
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/************ MAIN CONTENT ************/
+
+body {
+	padding-top: 91px;
+	color: rgb(0, 0, 0);
+	font-family: "Poppins", helvetica, arial, sans-serif;
+}
+
+header {
+	background-color: rgb(255, 255, 255);
+	padding: 12px 6%;
+	overflow: hidden;
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	right: 0;
+	min-width: 94px;
+	transition: box-shadow 0.3s ease-in-out;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+section {
+	padding: 1rem 10%;
+}
+
+/************ NAVIGATION ************/
+.brand-name {
+	font-weight: 700;
+	font-size: 30px;
+}
+
+.nav-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-right: 12px;
+}
+
+.nav-links li a {
+	position: relative;
+	font-size: 18px;
+	transition: all 0.3s ease;
+	text-decoration: none;
+	color: black;
+}
+
+.nav-links li {
+	padding: 0 25px;
+}
+
+.nav-links {
+	display: flex;
+	list-style: none;
+}
+
+.nav-links li a::after {
+	content: "";
+	width: 0;
+	height: 3px;
+	background-color: dodgerblue;
+	position: absolute;
+	left: 0;
+	bottom: -6px;
+	transition: 0.1s;
+}
+
+.nav-links li a:hover::after {
+	width: 100%;
+}
+
+.nav-links li a:hover {
+	opacity: 90%;
+	color: dodgerblue;
+}
+
+.nav-links li a:active {
+	opacity: 0.5;
+	transition: 0.05s;
+}
+
+.cta-link {
+	color: black;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.cta-link:hover {
+	opacity: 90%;
+	color: dodgerblue;
+}
