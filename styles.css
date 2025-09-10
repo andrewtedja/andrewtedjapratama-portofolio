@@ -4,17 +4,26 @@
 	margin: 0;
 	padding: 0;
 }
-
+:root {
+	--primary: #0b0f14;
+	--secondary: white;
+}
 /************ MAIN CONTENT ************/
 
 body {
 	padding-top: 91px;
 	color: rgb(0, 0, 0);
+	background-color: var(--secondary);
 	font-family: "Poppins", helvetica, arial, sans-serif;
 }
 
+.section-offset {
+	padding-top: 150px;
+	margin-top: -150px;
+}
+
 header {
-	background-color: rgb(255, 255, 255);
+	background-color: var(--secondary);
 	padding: 12px 6%;
 	overflow: hidden;
 	position: fixed;
@@ -46,7 +55,6 @@ section {
 	align-items: center;
 	margin-right: 12px;
 }
-
 .nav-links li a {
 	position: relative;
 	font-size: 18px;
@@ -97,5 +105,95 @@ section {
 
 .cta-link:hover {
 	opacity: 90%;
+	color: dodgerblue;
+}
+
+/************ HERO ************/
+.hero {
+	display: flex;
+	background-color: var(--secondary);
+	align-items: center;
+	justify-content: space-between;
+	padding: 2rem 8%;
+	gap: 2rem;
+}
+
+.hero-left {
+	display: flex;
+	gap: 2rem;
+	flex: 1;
+}
+
+.profile-img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: bottom;
+	min-width: 120px;
+	min-height: 120px;
+}
+
+.hero-text h1 {
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 1.4;
+}
+
+.hero-text .highlight {
+	font-weight: 700;
+}
+
+.hero-right {
+	flex: 1;
+	max-width: 500px;
+}
+
+.hero-right p {
+	font-size: 1rem;
+	margin-bottom: 1rem;
+}
+
+.hero-contacts {
+	display: flex;
+	gap: 1rem;
+	font-size: 1.3rem;
+}
+
+.social-icon {
+	height: 30px;
+	cursor: pointer;
+}
+
+.cta-btn {
+	display: inline-block;
+	padding: 0.7rem 1.2rem;
+	border: 1px solid var(--primary);
+	border-radius: 25px;
+	text-decoration: none;
+	color: var(--primary);
+	font-weight: 500;
+	transition: background 0.2s ease;
+	margin-block: 1rem;
+}
+
+.cta-btn:hover {
+	background: var(--primary);
+	color: var(--secondary);
+}
+
+/* IG, linkedin, github dll */
+.social-icons {
+	display: flex;
+	gap: 1rem;
+	font-size: 1.3rem;
+}
+
+.social-icons a {
+	color: var(--primary);
+	transition: color 0.2s;
+}
+
+.social-icons a:hover {
 	color: dodgerblue;
 }
