@@ -114,7 +114,7 @@ section {
 	background-color: var(--secondary);
 	align-items: center;
 	justify-content: space-between;
-	padding: 2rem 6%;
+	padding: 3rem 6%;
 	gap: 2rem;
 }
 
@@ -249,4 +249,68 @@ section {
 	transform: scale(1.1);
 	border-color: dodgerblue;
 	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/************ EXP ************/
+.experience-section {
+	background: var(--secondary);
+	color: var(--primary);
+	padding: 3rem 6%;
+}
+.experience-title {
+	font-size: 1.8rem;
+	font-weight: 700;
+	margin-bottom: 1.25rem;
+}
+
+.experience-item {
+	display: grid;
+	grid-template-columns: 56px 1fr;
+	gap: 16px;
+	padding-bottom: 1.25rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.experience-gambar {
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	object-fit: cover;
+	background: var(--secondary);
+	border: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+.experience-isi {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.experience-kepala {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+.experience-perusahaan {
+	font-weight: 700;
+}
+.experience-posisi {
+	font-size: 0.95rem;
+	color: var(--primary);
+	margin-top: 2px;
+}
+.experience-tanggal {
+	font-size: 0.9rem;
+	color: var(--primary);
+	white-space: nowrap;
+}
+
+.experience-poin {
+	margin: 0.25rem 0 0 1rem;
+	color: gray;
+	line-height: 1.6;
+	max-width: 80%;
+	font-size: 14px;
 }
