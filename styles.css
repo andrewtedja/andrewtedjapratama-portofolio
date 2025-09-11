@@ -114,7 +114,7 @@ section {
 	background-color: var(--secondary);
 	align-items: center;
 	justify-content: space-between;
-	padding: 2rem 8%;
+	padding: 2rem 6%;
 	gap: 2rem;
 }
 
@@ -183,24 +183,18 @@ section {
 }
 
 /* IG, linkedin, github dll */
-.social-icons {
-	display: flex;
-	gap: 1rem;
-	font-size: 1.3rem;
+.social-icon:hover {
+	transform: scale(1.1);
+	transition: 0.2s;
 }
 
-.social-icons a {
-	color: var(--primary);
-	transition: color 0.2s;
-}
-
-.social-icons a:hover {
-	color: dodgerblue;
+.social-icon:active {
+	opacity: 0.5;
 }
 
 /************ TECH STACKS ************/
 .skills {
-	padding: 3rem 6%;
+	padding: 1rem 6%;
 	background: var(--secondary);
 }
 
