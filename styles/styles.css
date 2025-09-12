@@ -23,7 +23,7 @@ body {
 }
 
 header {
-	background-color: var(--secondary);
+	background-color: rgba(255, 255, 255, 1);
 	padding: 12px 6%;
 	overflow: hidden;
 	position: fixed;
@@ -35,11 +35,26 @@ header {
 	transition: box-shadow 0.3s ease-in-out;
 	display: flex;
 	justify-content: space-between;
+	/* backdrop-filter: blur(12px); */
 	align-items: center;
 }
 
 section {
 	padding: 1rem 10%;
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 12px 32px;
+	border: none;
+	border-radius: 24px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	text-decoration: none;
+	transition: all 0.2s ease;
 }
 
 /************ NAVIGATION ************/
@@ -83,10 +98,6 @@ section {
 	transition: 0.1s;
 }
 
-.nav-links li a:hover::after {
-	width: 100%;
-}
-
 .nav-links li a:hover {
 	opacity: 90%;
 	color: dodgerblue;
@@ -97,14 +108,16 @@ section {
 	transition: 0.05s;
 }
 
+.nav-links li a:hover::after {
+	width: 100%;
+}
+
 .cta-link {
 	color: black;
 	text-decoration: none;
-	transition: all 0.3s ease;
 }
 
 .cta-link:hover {
-	opacity: 90%;
 	color: dodgerblue;
 }
 
@@ -117,7 +130,23 @@ section {
 	padding: 3rem 6%;
 	gap: 2rem;
 }
+.hero-text h1 {
+	font-size: 28px;
+	font-weight: 400;
+	line-height: 1.4;
+}
 
+.hero-intro {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.4;
+}
+
+.hero-right {
+	flex: 1;
+	max-width: 400px;
+	text-align: justify;
+}
 .hero-left {
 	display: flex;
 	gap: 2rem;
@@ -134,38 +163,29 @@ section {
 	min-height: 120px;
 }
 
-.hero-text h1 {
-	font-size: 1.6rem;
-	font-weight: 400;
-	line-height: 1.4;
-}
-
-.hero-text .highlight {
-	font-weight: 700;
-}
-
-.hero-right {
-	flex: 1;
-	max-width: 500px;
-}
-
 .hero-right p {
-	font-size: 1rem;
-	margin-bottom: 1rem;
+	font-size: 13px;
 }
 
 .hero-contacts {
 	display: flex;
+	align-items: center;
 	gap: 1rem;
 	font-size: 1.3rem;
 }
 
 .social-icon {
+	margin-top: 12px;
 	height: 30px;
 	cursor: pointer;
 }
 
-.cta-btn {
+.download-icon {
+	height: 15px;
+}
+
+.cta-button,
+.download-button {
 	display: inline-block;
 	padding: 0.7rem 1.2rem;
 	border: 1px solid var(--primary);
@@ -174,10 +194,17 @@ section {
 	color: var(--primary);
 	font-weight: 500;
 	transition: background 0.2s ease;
-	margin-block: 1rem;
+	margin-top: 12px;
 }
 
-.cta-btn:hover {
+.download-button {
+	margin-left: 6px;
+}
+.download-button:active {
+	opacity: 0.5;
+}
+
+.cta-button:hover {
 	background: var(--primary);
 	color: var(--secondary);
 }
@@ -194,7 +221,7 @@ section {
 
 /************ TECH STACKS ************/
 .skills {
-	padding: 1rem 6%;
+	padding: 2rem 6%;
 	background: var(--secondary);
 }
 
@@ -267,7 +294,7 @@ section {
 	display: grid;
 	grid-template-columns: 56px 1fr;
 	gap: 16px;
-	padding-bottom: 1.25rem;
+	padding-bottom: 24px;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -286,7 +313,7 @@ section {
 	gap: 0.5rem;
 }
 
-.experience-kepala {
+.experience-header {
 	display: flex;
 	justify-content: space-between;
 	align-items: baseline;
@@ -311,6 +338,114 @@ section {
 	margin: 0.25rem 0 0 1rem;
 	color: gray;
 	line-height: 1.6;
-	max-width: 80%;
+	max-width: 60%;
 	font-size: 14px;
+}
+
+/************ PROJECTS ************/
+
+.projects-section {
+	margin: 0 auto;
+	padding: 4rem 6%;
+	text-align: center;
+}
+
+.projects-section h2 {
+	font-size: 2rem;
+	margin-bottom: 1.5rem;
+	font-weight: 600;
+}
+
+.projects-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 3rem 1.5rem;
+}
+
+.project-card {
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+	padding: 1.25rem;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	transition: 0.2s;
+}
+
+.project-desc {
+	font-size: 14px;
+	color: gray;
+	margin-bottom: 1rem;
+	line-height: 1.5;
+	text-align: justify;
+}
+
+.project-card h3 {
+	font-size: 1.1rem;
+	margin-bottom: 0.5rem;
+}
+
+.project-card:hover {
+	transform: scale(1.05);
+}
+
+.project-img-container {
+	border-radius: 4px;
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	margin: 12px 0;
+}
+
+.project-img-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: center;
+}
+
+.project-buttons {
+	margin-top: auto;
+	display: flex;
+	justify-content: space-between;
+	gap: 0.75rem;
+}
+
+.button.view {
+	background: dodgerblue;
+	color: #fff;
+}
+
+.button.view:hover {
+	opacity: 0.85;
+}
+
+.view-all .button,
+.button.github {
+	background: #333;
+	color: #fff;
+}
+
+.view-all .button:hover {
+	background: var(--primary);
+}
+
+.button.github:hover {
+	background: var(--primary);
+}
+
+.button.github img {
+	height: 15px;
+}
+
+.view-all {
+	margin-top: 2rem;
+	display: flex;
+	justify-content: center;
+}
+
+.eye-icon {
+	fill: white;
+	width: 16px;
 }
