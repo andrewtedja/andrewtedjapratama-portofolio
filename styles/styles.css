@@ -11,10 +11,12 @@
 /************ MAIN CONTENT ************/
 
 body {
-	padding-top: 91px;
 	color: rgb(0, 0, 0);
 	background-color: var(--secondary);
-	font-family: "Poppins", helvetica, arial, sans-serif;
+	font-family: "Space Grotesk", sans-serif;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 .section-offset {
@@ -24,9 +26,8 @@ body {
 
 header {
 	background-color: rgba(255, 255, 255, 1);
-	padding: 12px 6%;
+	padding: 24px 6%;
 	overflow: hidden;
-	position: fixed;
 	z-index: 1000;
 	top: 0;
 	left: 0;
@@ -59,8 +60,8 @@ section {
 
 /************ NAVIGATION ************/
 .brand-name {
-	font-weight: 700;
-	font-size: 30px;
+	font-weight: 500;
+	font-size: 16px;
 }
 
 .nav-container {
@@ -68,18 +69,18 @@ section {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	margin-right: 12px;
+	gap: 20px;
 }
 .nav-links li a {
 	position: relative;
-	font-size: 18px;
+	font-size: 16px;
 	transition: all 0.3s ease;
 	text-decoration: none;
 	color: black;
 }
 
 .nav-links li {
-	padding: 0 25px;
+	padding: 0 12px;
 }
 
 .nav-links {
@@ -127,7 +128,7 @@ section {
 	background-color: var(--secondary);
 	align-items: center;
 	justify-content: space-between;
-	padding: 3rem 6%;
+	padding: 6rem 6%;
 	gap: 2rem;
 }
 .hero-text h1 {
@@ -167,7 +168,7 @@ section {
 	font-size: 13px;
 }
 
-.hero-contacts {
+.contacts {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
@@ -221,12 +222,12 @@ section {
 
 /************ TECH STACKS ************/
 .skills {
-	padding: 2rem 6%;
+	padding: 0 6%;
 	background: var(--secondary);
 }
 
 .skills h2 {
-	font-size: 1.8rem;
+	font-size: 28px;
 	font-weight: 500;
 	margin-bottom: 2rem;
 	color: var(--primary);
@@ -235,7 +236,7 @@ section {
 .skills-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-	gap: 32px 32px;
+	gap: 24px 32px;
 	place-items: center;
 	margin: 0 auto 1rem auto;
 }
@@ -285,8 +286,8 @@ section {
 	padding: 3rem 6%;
 }
 .experience-title {
-	font-size: 1.8rem;
-	font-weight: 700;
+	font-size: 28px;
+	font-weight: 500;
 	margin-bottom: 1.25rem;
 }
 
@@ -324,18 +325,18 @@ section {
 	font-weight: 700;
 }
 .experience-posisi {
-	font-size: 0.95rem;
+	font-size: 14px;
 	color: var(--primary);
 	margin-top: 2px;
 }
 .experience-tanggal {
-	font-size: 0.9rem;
+	font-size: 15px;
 	color: var(--primary);
 	white-space: nowrap;
 }
 
 .experience-poin {
-	margin: 0.25rem 0 0 1rem;
+	margin: 4px 0 0 16px;
 	color: gray;
 	line-height: 1.6;
 	max-width: 60%;
@@ -347,7 +348,6 @@ section {
 .projects-section {
 	margin: 0 auto;
 	padding: 4rem 6%;
-	text-align: center;
 }
 
 .projects-section h2 {
@@ -356,21 +356,35 @@ section {
 	font-weight: 600;
 }
 
+.projects-section h3 {
+	font-size: 1rem;
+	margin-bottom: 1.5rem;
+	font-weight: 600;
+	color: gray;
+}
+
 .projects-grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 3rem 1.5rem;
 }
 
 .project-card {
 	background: #fff;
+	border: 2px solid lightgray;
 	border-radius: 10px;
-	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
-	padding: 1.25rem;
 	text-align: left;
+	overflow: hidden;
+	transition: 0.2s;
 	display: flex;
 	flex-direction: column;
-	transition: 0.2s;
+}
+
+.project-content {
+	flex: 1;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
 }
 
 .project-desc {
@@ -384,6 +398,7 @@ section {
 .project-card h3 {
 	font-size: 1.1rem;
 	margin-bottom: 0.5rem;
+	color: black;
 }
 
 .project-card:hover {
@@ -395,13 +410,11 @@ section {
 	width: 100%;
 	height: 200px;
 	overflow: hidden;
-	margin: 12px 0;
 }
 
 .project-img-container img {
 	width: 100%;
 	height: 100%;
-	object-fit: contain;
 	object-position: center;
 }
 
@@ -448,4 +461,150 @@ section {
 .eye-icon {
 	fill: white;
 	width: 16px;
+}
+
+/************ RESEARCH ************/
+.research-section {
+	background: rgb(255, 253, 253);
+	color: var(--primary);
+	padding: 3rem 6%;
+}
+
+.research-title {
+	font-size: 28px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.research-item {
+	padding: 24px;
+	margin-bottom: 24px;
+	background-color: var(--secondary);
+	border: 2px lightgray solid;
+}
+
+.research-isi {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.research-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+
+.research-judul {
+	font-weight: 700;
+}
+
+.research-desc {
+	font-size: 14px;
+	color: gray;
+	line-height: 1.6;
+	max-width: 70%;
+}
+
+.research-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.research-tags span,
+.skill-tags span {
+	font-size: 12px;
+	padding: 4px 10px;
+	border: 1px solid lightgray;
+	font-weight: bold;
+	border-radius: 20px;
+}
+
+.research-links {
+	display: flex;
+	gap: 14px;
+	margin-top: 6px;
+}
+
+.research-links a {
+	font-size: 14px;
+	color: var(--primary);
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+	transition: border-color 0.2s;
+}
+
+.research-links a:hover {
+	border-color: var(--primary);
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: rgba(255, 255, 255, 1);
+	padding: 24px 6%;
+	overflow: hidden;
+}
+
+.footer-copyright {
+	text-align: center;
+}
+
+.hamburger-icon {
+	display: none;
+	cursor: pointer;
+	user-select: none;
+	width: 24px;
+	height: 24px;
+}
+
+@media (max-width: 768px) {
+	.cta-link {
+		display: none;
+	}
+
+	.brand-name {
+		font-size: 14px;
+	}
+
+	.nav-links {
+		display: none;
+	}
+
+	.hamburger-icon {
+		display: block;
+	}
+
+	.nav-container {
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	.nav-links li {
+		padding: 12px 0;
+		text-align: center;
+	}
+
+	.skills-grid {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	.hero {
+		display: flex;
+		flex-direction: column;
+		padding: 2rem 1.5rem;
+	}
+
+	.hero-left h1 {
+		font-size: 20px;
+	}
+
+	.projects-grid {
+		grid-template-columns: 1fr;
+	}
 }

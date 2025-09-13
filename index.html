@@ -9,33 +9,34 @@
 		<link rel="stylesheet" href="styles/styles.css" />
 		<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
-		<!-- Poppins -->
+		<!-- FONTS -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=MedievalSharp&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Space+Grotesk:wght@300..700&display=swap"
 			rel="stylesheet"
 		/>
 	</head>
 	<body>
 		<header>
-			<div class="brand">
-				<h1 class="brand-name">
-					Andrew<span style="color: rgb(70, 163, 255)">.</span>dev
-				</h1>
-			</div>
-
 			<nav class="nav-container">
-				<ul class="nav-links">
-					<li><a href="#">Resume</a></li>
-					<li><a href="#projects">Showcase</a></li>
-					<li><a href="#experience">Experience</a></li>
+				<div class="brand">
+					<h1 class="brand-name">Andrew Tedjapratama</h1>
+				</div>
 
-					<li><a href="#skills">About Me</a></li>
+				<ul class="nav-links">
+					<li><a href="about.html">About</a></li>
+					<li><a href="#experience">Experience</a></li>
+					<li><a href="#projects">Showcase</a></li>
+					<li><a href="#research">Writing</a></li>
 				</ul>
+
+				 <div class="hamburger">
+					<img class="hamburger-icon" src="assets/icons/hamburger.png" alt="mobile-menu">
+				</div>
 			</nav>
 
-			<a href="#cta" class="cta-link">Let’s Connect &#8618;</a>
+			<a href="#footer" class="cta-link">Let’s Connect &#8618;</a>
 		</header>
 		<main>
 			<section class="hero">
@@ -48,12 +49,12 @@
 					<div class="hero-text">
 						<h1>
 							<span class="hero-intro"
-								>👋 Hello there! I am Andrew Tedjapratama</span
+								>👋 Hello there! I&apos;m Andrew</span
 							><br />
 							I build and design
 							<span
 								style="
-									color: rgb(0, 128, 255);
+									color: dodgerblue;
 									font-weight: 700;
 								"
 								>Fullstack + AI/ML
@@ -72,7 +73,7 @@
 						tomorrow. Fueled by coffee, always ready to learn and
 						collaborate!
 					</p>
-					<div class="hero-contacts">
+					<div class="contacts">
 						<a
 							href="https://www.linkedin.com/in/andrewtedjapratama/"
 							><img
@@ -96,17 +97,19 @@
 								title="Github Profile"
 						/></a>
 					</div>
-					<a href="showcase.html" class="cta-button"
+					<a href="#projects" class="cta-button"
 						>View my work &#8618;</a
 					>
-					<!-- <a href="showcase.html" class="download-button"
+					<a
+						href="assets/pdf/resume-andrewtedjapratama.pdf"
+						class="download-button"
 						>Download CV
 						<img
 							class="download-icon"
 							src="assets/icons/download.png"
 							alt="download icon"
 							title="Download My Resume"
-					/></a> -->
+					/></a>
 				</div>
 			</section>
 			<section class="skills">
@@ -495,7 +498,8 @@
 				</ol>
 			</section>
 			<section id="projects" class="projects-section">
-				<h2>Projects I&apos;ve Worked On</h2>
+				<h2>Projects</h2>
+				<h3>A collection of projects I&apos;ve worked on</h3>
 
 				<div class="projects-grid">
 					<div class="project-card">
@@ -505,30 +509,33 @@
 								alt="Project 4"
 							/>
 						</div>
-						<h3>FocuSpace</h3>
-						<p class="project-desc">
-							A focus enhancing virtual workspace, AI-assisted,
-							and personalized for neurodivergent users and anyone
-							seeking a distraction-free environment with
-							customizable ambience, music, and all-in-one
-							productivity tools. Built with T3 Stack + OpenAI
-						</p>
-						<div class="project-buttons">
-							<button class="button view">
-								View Project
-								<img
-									src="assets/icons/eye.png"
-									class="eye-icon"
-									alt="view-project"
-								/>
-							</button>
-							<a href="#" class="button github">
-								<img
-									src="assets/techstack/github.png"
-									alt="GitHub"
-								/>
-								GitHub
-							</a>
+						<div class="project-content">
+							<h3>FocuSpace</h3>
+							<p class="project-desc">
+								A focus enhancing virtual workspace,
+								AI-assisted, and personalized for neurodivergent
+								users and anyone seeking a distraction-free
+								environment with customizable ambience, music,
+								and all-in-one productivity tools. Built with T3
+								Stack + OpenAI
+							</p>
+							<div class="project-buttons">
+								<button class="button view">
+									View Project
+									<img
+										src="assets/icons/eye.png"
+										class="eye-icon"
+										alt="view-project"
+									/>
+								</button>
+								<a href="#" class="button github">
+									<img
+										src="assets/techstack/github.png"
+										alt="GitHub"
+									/>
+									GitHub
+								</a>
+							</div>
 						</div>
 					</div>
 					<div class="project-card">
@@ -538,32 +545,34 @@
 								alt="Project 5"
 							/>
 						</div>
-						<h3>ChainPulse</h3>
-						<p class="project-desc">
-							Full-stack project that analyzes real-time
-							cryptocurrency news for sentiment analysis using
-							advanced string matching algorithms such as
-							Aho-Corasick, Levenshtein Distance, and regex. It
-							offers an interactive dashboard and coin sentiment
-							trends from the CryptoPanic API, visualized with
-							D3.js.
-						</p>
-						<div class="project-buttons">
-							<button class="button view">
-								View Project
-								<img
-									src="assets/icons/eye.png"
-									class="eye-icon"
-									alt="view-project"
-								/>
-							</button>
-							<a href="#" class="button github">
-								<img
-									src="assets/techstack/github.png"
-									alt="GitHub"
-								/>
-								GitHub
-							</a>
+						<div class="project-content">
+							<h3>Cryptocurrency Sentiment Analyzer</h3>
+							<p class="project-desc">
+								Full-stack project that analyzes real-time
+								cryptocurrency news for sentiment analysis using
+								advanced string matching algorithms such as
+								Aho-Corasick, Levenshtein Distance, and regex.
+								It offers an interactive dashboard and coin
+								sentiment trends from the CryptoPanic API,
+								visualized with D3.js.
+							</p>
+							<div class="project-buttons">
+								<button class="button view">
+									View Project
+									<img
+										src="assets/icons/eye.png"
+										class="eye-icon"
+										alt="view-project"
+									/>
+								</button>
+								<a href="#" class="button github">
+									<img
+										src="assets/techstack/github.png"
+										alt="GitHub"
+									/>
+									GitHub
+								</a>
+							</div>
 						</div>
 					</div>
 					<div class="project-card">
@@ -573,30 +582,32 @@
 								alt="Project 1"
 							/>
 						</div>
-						<h3>TreePressor</h3>
-						<p class="project-desc">
-							Quadtree-based image compression tool built with
-							Divide & Conquer algorithms using Java. Supports
-							customizable configuration with error metrics
-							(Variance, MAD, MPD, SSIM) with an extra GIF feature
-							for visualization.
-						</p>
-						<div class="project-buttons">
-							<button class="button view disabled" disabled>
-								View Project
-								<img
-									src="assets/icons/eye.png"
-									class="eye-icon"
-									alt="view-project"
-								/>
-							</button>
-							<a href="#" class="button github">
-								<img
-									src="assets/techstack/github.png"
-									alt="GitHub"
-								/>
-								GitHub
-							</a>
+						<div class="project-content">
+							<h3>Quadtree-based Image Compressor</h3>
+							<p class="project-desc">
+								Compress images fast and efficiently using
+								Divide & Conquer algorithms, built using Java.
+								Supports customizable configuration with error
+								metrics (Variance, MAD, MPD, SSIM) with an extra
+								GIF feature for visualization.
+							</p>
+							<div class="project-buttons">
+								<button class="button view disabled" disabled>
+									View Project
+									<img
+										src="assets/icons/eye.png"
+										class="eye-icon"
+										alt="view-project"
+									/>
+								</button>
+								<a href="#" class="button github">
+									<img
+										src="assets/techstack/github.png"
+										alt="GitHub"
+									/>
+									GitHub
+								</a>
+							</div>
 						</div>
 					</div>
 
@@ -607,29 +618,31 @@
 								alt="Project 2"
 							/>
 						</div>
-						<h3>SongSmart</h3>
-						<p class="project-desc">
-							Song & Album Cover Finder using Principal Component
-							Analysis (PCA), implementing image retrieval and
-							music information retrieval. Built with Python,
-							Librosa, Next.js, and SQLite.
-						</p>
-						<div class="project-buttons">
-							<button class="button view">
-								View Project
-								<img
-									src="assets/icons/eye.png"
-									class="eye-icon"
-									alt="view-project"
-								/>
-							</button>
-							<a href="#" class="button github">
-								<img
-									src="assets/techstack/github.png"
-									alt="GitHub"
-								/>
-								GitHub
-							</a>
+						<div class="project-content">
+							<h3>SongSmart</h3>
+							<p class="project-desc">
+								Song & Album Cover Finder using Principal
+								Component Analysis (PCA), implementing image
+								retrieval and music information retrieval. Built
+								with Python, Librosa, Next.js, and SQLite.
+							</p>
+							<div class="project-buttons">
+								<button class="button view">
+									View Project
+									<img
+										src="assets/icons/eye.png"
+										class="eye-icon"
+										alt="view-project"
+									/>
+								</button>
+								<a href="#" class="button github">
+									<img
+										src="assets/techstack/github.png"
+										alt="GitHub"
+									/>
+									GitHub
+								</a>
+							</div>
 						</div>
 					</div>
 
@@ -640,30 +653,33 @@
 								alt="Project 3"
 							/>
 						</div>
-						<h3>Little Alchemy 2 Recipe Finder</h3>
-						<p class="project-desc">
-							Project for finding and visualizing recipes for
-							Little Alchemy 2. The application implements
-							web-scraping and searching algorithms such as DFS,
-							BFS, and bidirectional search to find recipes. Built
-							with using Golang, Gin, D3.js, and Next.js.
-						</p>
-						<div class="project-buttons">
-							<button class="button view">
-								View Project
-								<img
-									src="assets/icons/eye.png"
-									class="eye-icon"
-									alt="view-project"
-								/>
-							</button>
-							<a href="#" class="button github">
-								<img
-									src="assets/techstack/github.png"
-									alt="GitHub"
-								/>
-								GitHub
-							</a>
+						<div class="project-content">
+							<h3>Little Alchemy 2 Recipe Finder</h3>
+							<p class="project-desc">
+								Project for finding and visualizing recipes for
+								Little Alchemy 2. The application implements
+								web-scraping and searching algorithms such as
+								DFS, BFS, and bidirectional search to find
+								recipes. Built with using Golang, Gin, D3.js,
+								and Next.js.
+							</p>
+							<div class="project-buttons">
+								<button class="button view">
+									View Project
+									<img
+										src="assets/icons/eye.png"
+										class="eye-icon"
+										alt="view-project"
+									/>
+								</button>
+								<a href="#" class="button github">
+									<img
+										src="assets/techstack/github.png"
+										alt="GitHub"
+									/>
+									GitHub
+								</a>
+							</div>
 						</div>
 					</div>
 
@@ -674,40 +690,149 @@
 								alt="Project 6"
 							/>
 						</div>
-						<h3>InfoNama - CV Applicant Tracking System</h3>
-						<p class="project-desc">
-							Python and flet application for CV Applicant
-							Tracking System using string matching algorithms and
-							regex. Integrated with a MySQL database for storing
-							applicant PDF records and implementing RSA
-							encryption for secure data storage.
-						</p>
-						<div class="project-buttons">
-							<button class="button view">
-								View Project
-								<img
-									src="assets/icons/eye.png"
-									class="eye-icon"
-									alt="view-project"
-								/>
-							</button>
-							<a href="#" class="button github">
-								<img
-									src="assets/techstack/github.png"
-									alt="GitHub"
-								/>
-								GitHub
-							</a>
+						<div class="project-content">
+							<h3>CV Applicant Tracking System</h3>
+							<p class="project-desc">
+								Python and flet application for CV Applicant
+								Tracking System using string matching algorithms
+								and regex. Integrated with a MySQL database for
+								storing applicant PDF records and implementing
+								RSA encryption for secure data storage.
+							</p>
+							<div class="project-buttons">
+								<button class="button view">
+									View Project
+									<img
+										src="assets/icons/eye.png"
+										class="eye-icon"
+										alt="view-project"
+									/>
+								</button>
+								<a href="#" class="button github">
+									<img
+										src="assets/techstack/github.png"
+										alt="GitHub"
+									/>
+									GitHub
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
 
 				<div class="view-all">
-					<a href="projects.html" class="button">
+					<a href="https:/" class="button">
 						View All Projects
 					</a>
 				</div>
 			</section>
+			<section class="research-section" id="research">
+				<h2 class="research-title">Academic Research</h2>
+
+				<div class="research-item">
+					<div class="research-isi">
+						<div class="research-header">
+							<h3 class="research-judul">
+								Enhanced Audio Source Separation Using Singular
+								Value Decomposition and Custom Thresholding
+								Techniques
+							</h3>
+						</div>
+						<p class="research-desc">
+							Applied Singular Value Decomposition (SVD) on spectrograms for audio source separation, enhanced with custom thresholding techniques for isolating vocals and instruments.
+						</p>
+						<div class="research-tags">
+							<span>SVD</span><span>Audio Processing</span
+							><span>Thresholding</span
+							><span>Source Seperation</span><span>Spectogram Analysis</span>
+						</div>
+						<div class="research-links">
+							<a href="assets/pdf/research-1.pdf" download>Read Paper</a>
+							<a href="https://github.com/andrewtedja/audio-source-separation-svd">View Code</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="research-item">
+					<div class="research-isi">
+						<div class="research-header">
+							<h3 class="research-judul"
+								>String Matching Algorithms for Cryptocurrency
+News Sentiment Analysis and Price Prediction</span
+							>
+						</div>
+						<p class="research-desc">
+							Implemented string matching algorithms like Levenshtein, Aho-Corasick, Regex for cryptocurrency news sentiment analysis with fetching from CryptoPanic API and visualizing sentiment with interactive bubble charts.
+						</p>
+						<div class="research-tags">
+							<span>Sentiment Analysis</span>
+							<span>String Matching</span>
+							<span>Regex</span>
+							<span>Cryptocurrency</span>
+						</div>
+						<div class="research-links">
+							<a href="assets/pdf/research-2.pdf" download>Read Paper</a>
+							<a href="https://github.com/andrewtedja/chain-pulse">View Code</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="research-item">
+					<div class="research-isi">
+						<div class="research-header">
+							<h3 class="research-judul"
+								>Aplikasi Travelling Salesman Problem untuk Optimalisasi Rute Penjelajahan Wisata Alam Pegunungan Bandung</h3
+							>
+						</div>
+						<p class="research-desc">
+							Applied Travelling Salesman Problem (TSP) with Dynamic Programming to find optimal routes in Bandung's mountain tourism areas, achieving efficient cost effective paths compared to brute force.
+						</p>
+						<div class="research-tags">
+							<span>Graph Theory</span><span>Dynamic Programming</span><span>TSP</span><span>Route Optimization</span><span>Tourism Routing</span>
+						</div>
+						<div class="research-links">
+							<a href="assets/pdf/research-3.pdf" download>Read Paper</a>
+							<a href="https://github.com/andrewtedja/travel-optimizer-tsp">View Code</a>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
+		<footer id="footer">
+			<div class="footer-container">
+				<div class="contacts">
+						<a
+							href="https://www.linkedin.com/in/andrewtedjapratama/"
+							><img
+								src="assets/socials/linkedin.png"
+								alt="LinkedIn"
+								class="social-icon"
+								title="LinkedIn Profile"
+						/></a>
+						<a>
+							<img
+								src="assets/socials/email.png"
+								alt="Gmail"
+								class="social-icon"
+								title="andrewtedj@gmail.com"
+						/></a>
+						<a href="https://github.com/andrewtedja"
+							><img
+								src="assets/socials/github.png"
+								alt="Github"
+								class="social-icon"
+								title="Github Profile"
+						/></a>
+					</div>
+			</div>
+			<div class="footer-copyright">
+				<p>
+					Andrew Tedjapratama • © 2025
+				</p>
+				<p>
+					Designed + Coded with 💓 for WBD
+				</p>
+			</div>
+		</footer>
 	</body>
 </html>
